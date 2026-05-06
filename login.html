@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>BPHC Login</title>
+<style>
+body { font-family: Arial; text-align:center; background:#eef5ff; }
+.box { margin-top:100px; background:white; padding:20px; width:300px; margin:auto; border-radius:10px; box-shadow:0 0 10px #ccc;}
+input { margin:10px; padding:8px; width:90%; }
+button { padding:10px; background:#2c7be5; color:white; border:none; }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+<h2>BPHC Joypur Login</h2>
+
+<input type="text" id="username" placeholder="Email"><br> <input type="password" id="password" placeholder="Password"><br>
+
+<button onclick="login()">Login</button>
+
+<p id="msg"></p>
+</div>
+
+<script>
+function login() {
+  var u = document.getElementById("username").value;
+  var p = document.getElementById("password").value;
+
+  if(u=="admin@gmail.com" && p=="1234"){
+    window.location="admin.html";
+  }
+  else if(u=="user@gmail.com" && p=="1234"){
+    window.location="user.html";
+  }
+  else{
+    document.getElementById("msg").innerHTML="Wrong login!";
+  }
+}
+</script>
+
+</body>
+</html>
